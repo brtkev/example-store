@@ -1,0 +1,19 @@
+
+#container{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+#searchbar{
+  border: 1px solid #050505;
+  outline: none;
+  padding: calc(.5vw + .5rem);
+  font-size: calc(.7vw + .5rem);
+  color: #050505;
+
+  &::placeholder{
+    font-size: calc(.7vw + .5rem);
+    color: #858585;
+  }
+}
