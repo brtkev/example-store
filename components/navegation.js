@@ -1,8 +1,6 @@
 
 import styles from '../styles/navegation.module.scss';
-import vercelImage from '../public/vercel.svg';
 
-import Image from 'next/image'
 import NavegationLink from './NavegationLink';
 import Searchbar from './searchbar';
 
@@ -11,22 +9,19 @@ function Navegation() {
         <div id={styles.container}>
             <ul id={styles.navUl}>
                 <li className={styles.navLi}>
-                    <div className={styles.imageContainer}>
-                        <Image id={styles.vercelImage} src={vercelImage} alt="logo"></Image>
-                    </div>
-                    {/* <NavegationLink name="products" href="/products" /> */}
+                    <NavegationLink name="home" href="/" />
                 </li>
                 <li className={styles.navLi}>
                     <NavegationLink name="products" href="/products" />
                 </li>
                 <li className={styles.navLi}>
-                    <NavegationLink name="us" href="/us" />
+                    <NavegationLink name="about us" href="/about" />
                 </li>
                 <li className={styles.navLi}>
                     <NavegationLink name="Account" href="/account" />
                 </li>
                 <li className={styles.navLi}>
-                    <Searchbar placeholder="look product." />
+                    <Searchbar placeholder="Find product" />
                 </li>
             </ul>
         </div>

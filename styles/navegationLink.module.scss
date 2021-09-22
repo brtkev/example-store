@@ -1,8 +1,8 @@
 
-$font-size: calc(1vw + .7rem);
-$font-color: #050505;
+@use './variables.scss' as *;
 
 .link{  
-  color: #050505;
-  font-size: $font-size;
+  cursor: pointer;
+  color: $black;
+  font-size: $nav-font-size;
 }
