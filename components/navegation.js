@@ -15,13 +15,13 @@ function Navegation() {
                     <NavegationLink name="products" href="/products" />
                 </li>
                 <li className={styles.navLi}>
+                    <Searchbar placeholder="Find a product" />
+                </li>
+                <li className={styles.navLi}>
                     <NavegationLink name="about us" href="/about" />
                 </li>
                 <li className={styles.navLi}>
                     <NavegationLink name="Account" href="/account" />
-                </li>
-                <li className={styles.navLi}>
-                    <Searchbar placeholder="Find product" />
                 </li>
             </ul>
         </div>

@@ -1,0 +1,64 @@
+@use './variables' as *;
+
+.container{
+  width: 100%;
+  height: 100%;
+  position: relative;
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  padding: 3%;
+
+  .imageContainer{
+    position: relative;
+    flex: 1;
+    width: 100%;
+    margin-bottom: 5%;
+    
+  }
+
+  .information{
+    flex: 1;
+    display: flex;
+    color: $black;
+    font-size: $general-font-size;
+    
+    display: flex;
+    flex-direction: column;
+    
+    p{
+      display: flex;
+      align-items: center;
+      text-align: justify;
+      flex: 1;
+    }
+
+    .buttonContainer{
+      display: flex;
+      align-items: flex-end;
+      justify-content: space-between;
+
+      button{
+        font-size: $general-font-size;
+        outline: none;
+        border: none;
+        height: calc(1vw + 1.5rem);
+        width: calc(2vw + 3.5rem);
+        cursor: pointer;
+
+        background-color: $black;
+        color: $white;
+
+        transition:background-color .3s linear, color .3s linear;
+
+        &:hover{
+          background-color: $green;
+          color: $black;
+        }
+        // margin-bottom: 5%;
+      }
+    }
+  }
+}

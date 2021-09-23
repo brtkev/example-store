@@ -4,7 +4,8 @@ import styles from '../styles/Home.module.css'
 import Navegation from '../components/navegation';
 import TopProducts from '../components/TopProducts';
 
-export default function Home() {
+export default function Home({products}) {
+
   return (
     <div className={styles.container}>
       <Head>
@@ -13,7 +14,18 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Navegation />
-      <TopProducts />
+      <TopProducts products={products} />
     </div>
   )
+}
+
+export async function getServerSideProps(context) {
+  const res = await fetch('http://localhost:3000/api/store');
+  const json = await res.json();
+  const products = json.organic_results;
+  return {
+    props: {
+      products
+    }
+  }
 }

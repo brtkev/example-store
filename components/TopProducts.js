@@ -1,61 +1,25 @@
 
 import styles from '../styles/TopProducts.module.scss';
 
-const TopProducts = () => {
+import Image from 'next/image';
+import ProductCard from './ProductCard';
+
+
+const TopProducts = ({products}) => {
+
+  let listItems = products.map( (product, index) =>
+    <li key={product.product_id} className={styles.productContainer}>
+      <ProductCard product={product} />
+    </li>
+  );
+
   return (
     <div id={styles.container}>
       <ul id={styles.grid} >
-        <li className={styles.productContainer}>
-          <div className="productImage">generic image</div>
-          <div className="productDescription">product name</div>
-        </li>
-        <li className={styles.productContainer}>
-          <div className="productImage">generic image</div>
-          <div className="productDescription">product name</div>
-        </li>
-        <li className={styles.productContainer}>
-          <div className="productImage">generic image</div>
-          <div className="productDescription">product name</div>
-        </li>
-        <li className={styles.productContainer}>
-          <div className="productImage">generic image</div>
-          <div className="productDescription">product name</div>
-        </li>
-        <li className={styles.productContainer}>
-          <div className="productImage">generic image</div>
-          <div className="productDescription">product name</div>
-        </li>
-        <li className={styles.productContainer}>
-          <div className="productImage">generic image</div>
-          <div className="productDescription">product name</div>
-        </li>
-        <li className={styles.productContainer}>
-          <div className="productImage">generic image</div>
-          <div className="productDescription">product name</div>
-        </li>
-        <li className={styles.productContainer}>
-          <div className="productImage">generic image</div>
-          <div className="productDescription">product name</div>
-        </li>
-        <li className={styles.productContainer}>
-          <div className="productImage">generic image</div>
-          <div className="productDescription">product name</div>
-        </li>
-        <li className={styles.productContainer}>
-          <div className="productImage">generic image</div>
-          <div className="productDescription">product name</div>
-        </li>
-        <li className={styles.productContainer}>
-          <div className="productImage">generic image</div>
-          <div className="productDescription">product name</div>
-        </li>
-        <li className={styles.productContainer}>
-          <div className="productImage">generic image</div>
-          <div className="productDescription">product name</div>
-        </li>
+        {listItems}
       </ul>
     </div>
   )
 }
 
-export default TopProducts
+export default TopProducts;
